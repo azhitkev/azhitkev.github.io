@@ -5,7 +5,11 @@
     </div>
     <main role="main">
       <div class="content">
-        <h1>Zoom Hero Image on Scroll</h1>
+        <h2>
+          Welcome to the
+          <span class="typed-text"> {{ typeValue }} </span>
+          <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+        </h2>
         <a
           href="http://webdesignerwall.com/tutorials/how-to-add-icon-fonts-to-any-element-with-css"
           alt="webdesignerwall.com"
@@ -47,6 +51,7 @@
 <script>
 import { defineComponent } from "vue";
 import $ from "jquery";
+
 // Components
 
 $(window).scroll(function () {
@@ -62,7 +67,35 @@ export default defineComponent({
   components: {},
   methods: () => ({
     handleScroll: () => {},
+    typeText() {
+      if (this.charIndex < this.typeArray[this.typeArrayIndex].length) {
+        if (!this.typeStatus) this.typeStatus = true;
+        this.typeValue += this.typeArray[this.typeArrayIndex].charAt(
+          this.charIndex
+        );
+        this.charIndex += 1;
+        setTimeout(this.typeText, this.typingSpeed);
+      } else {
+        this.typeStatus = false;
+      }
+    },
+    eraseText() {},
   }),
+  data: () => {
+    return {
+      typeValue: "",
+      typeStatus: false,
+      typeArray: ["Western", "Engineering", "Satellite", "Team"],
+      typingSpeed: 200,
+      erasingSpeed: 100,
+      newTextDelay: 2000,
+      typeArrayIndex: 0,
+      charIndex: 0,
+    };
+  },
+  created() {
+    setTimeout(this.typeText, this.newTextDelay + 200);
+  },
 });
 </script>
 
@@ -79,6 +112,32 @@ a {
 h1 {
   font-size: 2.6rem;
   line-height: 2.6rem;
+}
+.typed-text {
+  color: purple;
+}
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  width: 4px;
+  background-color: #fff;
+  animation: cursorBlink 1s infinite;
+}
+
+cursor.typing {
+  animation: none;
+}
+
+@keyframes cursorBlink {
+  49% {
+    background-color: black;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
 }
 .content {
   margin: 0 auto;
