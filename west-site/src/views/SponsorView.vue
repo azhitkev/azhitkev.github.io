@@ -13,6 +13,18 @@
         Without our sponsors, we would not be able to complete our projects!
       </h2>
     </div>
+    <div id="sponsors-list" class="ml-20 flex flex-col">
+      <p class="text-left my-12 font-semibold text-xl">Our Sponsors</p>
+      <div class="flex flex-row max-h-12 max-w-12">
+        <img src="@/assets/uwoeng.png" class="max-h-12 max-w-12" />
+        <img src="@/assets/jmp.jpeg" class="max-h-12 max-w-12" />
+        <img src="@/assets/emworks.png" class="max-h-12 max-w-12" />
+        <img src="@/assets/altium.jpeg" class="max-h-12 max-w-12" />
+      </div>
+      <p class="text-left my-12 font-semibold text-xl">
+        Interested in becoming a sponsor?
+      </p>
+    </div>
   </div>
 </template>
 <style scoped>
