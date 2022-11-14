@@ -9,16 +9,16 @@
       <h1 class="text-5xl font-medium tracking-widest">Contact Us</h1>
       <h2 class="text-xl fonts-semibold">Have a question? Reach out!</h2>
     </div>
-    <div id="email-group">
-      <p class="text-left ml-12 mt-12">Email Us!</p>
+    <div id="email-group" class="text-left ml-12">
+      <p class="text-left mt-12 font-semibold text-xl">Email Us!</p>
       <input
         id="email-text"
         readonly
-        class="w-72"
+        class="w-80 text-center rounded border-2 border-purple-700 mt-2"
         value="westernengineeringsatellite@gmail.com"
       />
       <button class="btn" v-on:click="copyEmail()">
-        Copy email <font-awesome-icon icon="far fa-copy" />
+        <font-awesome-icon icon="fa-regular fa-copy" class="ml-2 fa-lg" />
       </button>
     </div>
   </div>
@@ -28,7 +28,8 @@
 export default {
   methods: {
     copyEmail() {
-      let text = document.getElementById("email-text").innerHTML;
+      let text = document.getElementById("email-text").value;
+      console.log(text);
       try {
         navigator.clipboard.writeText(text);
         console.log("Content copied to clipboard");
@@ -66,8 +67,6 @@ h2 {
   text-align: left;
 }
 #email-text[readonly] {
-  border-style: dotted;
   cursor: not-allowed;
-  color: purple;
 }
 </style>
