@@ -122,7 +122,7 @@ h1 {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 75%;
+  height: 90%;
   display: flex;
   align-items: center; /** Y-axis align **/
   justify-content: center; /** X-axis align */
