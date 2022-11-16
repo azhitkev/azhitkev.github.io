@@ -2,48 +2,40 @@
   <div>
     <div class="zoom">
       <img src="@/assets/earth-view.jpg" class="mt-20" />
+      <div class="centered">Western Engineering Satellite Team</div>
     </div>
-    <main role="main">
-      <div class="content">
-        <h2>
-          Welcome to the
-          <span class="typed-text"> {{ typeValue }} </span>
-          <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
-        </h2>
-        <a
-          href="http://webdesignerwall.com/tutorials/how-to-add-icon-fonts-to-any-element-with-css"
-          alt="webdesignerwall.com"
-          target="_blank"
-          >View Tutorial</a
-        >
-        <p>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-          nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus
-          magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget
-          risus varius blandit sit amet non magna. Nulla vitae elit libero, a
-          pharetra augue. Integer posuere erat a ante venenatis dapibus posuere
-          velit aliquet.
-        </p>
-        <p>
-          Curabitur blandit tempus porttitor. Integer posuere erat a ante
-          venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo
-          luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-          Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent
-          commodo cursus magna, vel scelerisque nisl consectetur et.
-        </p>
-        <footer>
-          <p>
-            A
-            <a
-              href="http://www.webdeisgnerwall.com"
-              alt="web designer wall"
-              target="_blank"
-              >webdesignerwall.com</a
-            >
-            Tutorial
+    <main role="main" class="text-white">
+      <section id="section-1" class="flex my-20 mx-40">
+        <h1 class="text-left font-medium w-2/4 mr-8">Our Mission.</h1>
+        <div class="font-semibold">
+          <p class="text-lg text-left">
+            The Western Engineering Satellite Team was created by a group of
+            undergraduate students from Western University passionate about
+            learning and designing aerospace and satellite projects.
           </p>
-        </footer>
-      </div>
+          <br />
+          <p class="text-lg text-left">
+            WEST strives to create more opportunities for students to gain
+            experience designing and creating small satellites before heading
+            out into the workplace. WEST aims to provide the STEM community with
+            insight into various different areas of STEM that would otherwise be
+            difficult to test.
+          </p>
+        </div>
+      </section>
+      <section id="section-2"><h1>The Execs</h1></section>
+      <footer>
+        <p>
+          A
+          <a
+            href="http://www.webdeisgnerwall.com"
+            alt="web designer wall"
+            target="_blank"
+            >webdesignerwall.com</a
+          >
+          Tutorial
+        </p>
+      </footer>
     </main>
   </div>
 </template>
@@ -114,13 +106,12 @@ h1 {
 }
 .content {
   margin: 0 auto;
-  max-width: 90%;
-  width: 720px;
+  max-width: 100%;
 }
 main {
   padding: 1% 0;
   position: relative;
-  background: #f5f5f5;
+  background: black;
   box-shadow: 0px -10px 60px rgba(0, 0, 0, 0.25);
   height: 100%;
 }
@@ -190,5 +181,29 @@ footer a {
       background-color: transparent;
     }
   }
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3.25em;
+  font-weight: 700;
+  color: #d6e3ff;
+  text-shadow: 1px 1px 1px #400080, 1px 2px 1px #400080, 1px 3px 1px #400080,
+    1px 7px 1px #400080, 1px 8px 1px #400080, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+
+#section-2 {
+  background-color: #02034f;
+  height: 50vh;
+  width: 100%;
+}
+html {
+  background-color: black;
 }
 </style>
