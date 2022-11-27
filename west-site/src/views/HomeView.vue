@@ -6,7 +6,7 @@
     </div>
     <main role="main" class="text-white">
       <section id="section-1" class="flex my-20 mx-40">
-        <h1 class="text-left font-medium w-2/4 mr-8">Our Mission.</h1>
+        <h1 class="text-left font-medium w-2/4 pr-8">Our Mission.</h1>
         <div class="font-semibold flex-col text-left">
           <p class="text-lg">
             The Western Engineering Satellite Team was created by a group of
@@ -21,23 +21,32 @@
             insight into various different areas of STEM that would otherwise be
             difficult to test.
           </p>
-          <button class="button-30 mt-8 font-semibold" role="button">
-            Learn more
-          </button>
+          <router-link to="/our-mission" custom v-slot="{ navigate }">
+            <button
+              class="button-30 mt-8 font-semibold"
+              role="button"
+              @click="navigate"
+            >
+              Learn more
+            </button>
+          </router-link>
         </div>
       </section>
-      <section id="section-2"><h1>The Execs</h1></section>
-      <footer>
-        <p>
-          A
-          <a
-            href="http://www.webdeisgnerwall.com"
-            alt="web designer wall"
-            target="_blank"
-            >webdesignerwall.com</a
-          >
-          Tutorial
-        </p>
+      <section id="section-2">
+        <h1 class="text-left font-medium w-2/4 px-40 py-20">
+          Satellite Subteams
+        </h1>
+        <div>
+          <h1>Electronic Power System</h1>
+          <h1>Payload</h1>
+          <h1>ADCS</h1>
+          <h1>Structures</h1>
+          <h1>Command & Data Handling</h1>
+          <h1>Communications</h1>
+        </div>
+      </section>
+      <footer class="my-4">
+        <p>Western University Associated</p>
       </footer>
     </main>
   </div>
@@ -202,7 +211,7 @@ footer a {
 }
 
 #section-2 {
-  background-color: #02034f;
+  background: linear-gradient(120deg, #7950f2, #270099);
   height: 50vh;
   width: 100%;
 }
