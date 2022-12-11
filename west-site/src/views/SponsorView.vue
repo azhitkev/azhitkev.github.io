@@ -31,14 +31,9 @@
       <div>
         <form
           id="form"
-          action="https://formsubmit.co/lex.zhch@gmail.com"
+          action="https://formsubmit.co/westernengineeringsatellite@gmail.com"
           method="POST"
         >
-          <a
-            href="https://dev.to/zougari47/contact-form-without-backend-using-javascript-4a8c"
-            target="_blank"
-            >blog link</a
-          >
           <div class="input_group">
             <label for="">name</label>
             <input
