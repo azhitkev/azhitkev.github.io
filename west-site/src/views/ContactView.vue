@@ -44,33 +44,24 @@
         <p>Spencer Engineering Building</p>
         <p>The University of Western Ontario</p>
         <p>London, Ontarion, Canada, N6A 5B9</p>
-        <Map
-          :center="center"
-          :zoom="7"
-          map-type-id="terrain"
-          style="width: 500px; height: 300px"
-        >
-          <GMapCluster>
-            <GMapMarker
-              :key="index"
-              v-for="(m, index) in markers"
-              :position="m.position"
-              :clickable="true"
-              :draggable="true"
-              @click="center = m.position"
-            />
-          </GMapCluster>
-        </Map>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.704583781092!2d-81.27822538412649!3d43.005554702083835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882eee22db5c7859%3A0xab828a2380a80605!2sSpencer%20Engineering%20Building!5e0!3m2!1sen!2sca!4v1670719694766!5m2!1sen!2sca"
+          width="700"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="my-8 mx-auto"
+        ></iframe>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Map, GMapCluster, GMapMarker } from "@fawmi/vue-google-maps";
-
 export default {
-  components: { Map, GMapCluster, GMapMarker },
+  components: {},
   data() {
     return {
       center: { lat: 43.0055547, lng: -81.2782254 },

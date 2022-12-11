@@ -14,7 +14,6 @@
             <li><router-link to="/involvement">Get Involved</router-link></li>
             <li><router-link to="/contact">Contact</router-link></li>
             <li><router-link to="/sponsors">Sponsors</router-link></li>
-            <li><router-link to="/news">WEST News</router-link></li>
           </ul>
         </nav>
       </header>

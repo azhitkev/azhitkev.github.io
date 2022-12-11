@@ -21,8 +21,12 @@
         <img src="@/assets/emworks.png" class="max-h-12 max-w-12" />
         <img src="@/assets/altium.jpeg" class="max-h-12 max-w-12" />
       </div>
-      <p class="text-left my-12 font-semibold text-xl">
+      <p class="text-left mt-12 mb-4 font-semibold text-xl">
         Interested in becoming a sponsor?
+      </p>
+      <p class="text-left font-medium text-lg">
+        Please take a look at our official sponsorship package and consider
+        filling out the form below!
       </p>
     </div>
   </div>
